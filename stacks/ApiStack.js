@@ -7,6 +7,7 @@ export function ApiStack({ stack, app }) {
   // Create the API
   const api = new Api(stack, "Api", {
     defaults: {
+      authorizer: "iam",  
       function: {
         // We are giving our API permission to access our DynamoDB table by setting permissions: [table].
         permissions: [table],
